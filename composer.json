@@ -1,0 +1,16 @@
+{
+    "name": "ploba/ballares-web2final",
+    "autoload": {
+        "psr-4": {
+            "Core\\": "core/",
+            "App\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Dan Ballares",
+            "email": "ploba07@gmail.com"
+        }
+    ],
+    "require": {}
+}
