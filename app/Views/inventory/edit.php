@@ -1,3 +1,8 @@
+<?php
+
+/** @var array $products */
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -323,7 +328,7 @@
             </div>
 
             <div class="form-body">
-                <form action="/inventory/update/<?= $product['id']; ?>" method="POST">
+                <form method="POST" action="/inventory/update/<?= $product['id']; ?>">
 
                     <div class="input-group">
                         <label for="product_name">

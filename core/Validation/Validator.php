@@ -6,28 +6,32 @@ class Validator
 {
 
     public static function required(
-        string|null $value
+        mixed $value
     ): bool
     {
-        return trim($value ?? '') !== '';
+        return trim((string)($value ?? '')) !== '';
     }
 
     public static function min(
-        string $value,
+        mixed $value,
         int $min
     ): bool
     {
-        return strlen(trim($value)) >= $min;
+        return strlen(
+            trim((string)($value ?? ''))
+        ) >= $min;
     }
 
+
     public static function max(
-        string $value,
+        mixed $value,
         int $max
     ): bool
     {
-        return strlen(trim($value)) <= $max;
+        return strlen(
+            trim((string)($value ?? ''))
+        ) <= $max;
     }
-
 
 
     public static function numeric(
@@ -37,8 +41,10 @@ class Validator
         return is_numeric($value);
     }
 
+
+
     public static function email(
-        string $value
+        mixed $value
     ): bool
     {
         return filter_var(

@@ -253,16 +253,12 @@
             align-items: center;
             transition: background 0.15s;
         }
-
         .btn-secondary:hover { background: var(--bg); }
     </style>
 </head>
 <body>
 
-<div class="topbar">
-    <span class="topbar-brand">&#9632; Warehouse OS</span>
-    <span class="topbar-meta">INVENTORY MODULE &nbsp;/&nbsp; v2.1</span>
-</div>
+
 
 <div class="page">
     <div class="form-wrapper">

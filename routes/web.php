@@ -15,3 +15,10 @@ $router->get('/inventory/edit/{id}', [InventoryController::class, 'edit']);
 $router->post('/inventory/update/{id}', [InventoryController::class, 'update']);
 
 $router->get('/inventory/delete/{id}', [InventoryController::class, 'delete']);
+
+//student
+//student/{id}/show
+
+$router->get('/student/{id}', [StudentController::class, 'name']);
+$router->get('/student/{idnum}', [StudentController::class, 'id_number']);
+

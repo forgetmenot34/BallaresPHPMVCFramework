@@ -1,3 +1,9 @@
+<?php
+
+/** @var array $products */
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -176,32 +182,6 @@
             text-transform: uppercase;
         }
 
-        .search-box {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            background: var(--bg);
-            border: 1px solid var(--border);
-            border-radius: 6px;
-            padding: 7px 12px;
-        }
-
-        .search-box svg {
-            width: 14px;
-            height: 14px;
-            color: var(--text-muted);
-            flex-shrink: 0;
-        }
-
-        .search-box input {
-            border: none;
-            background: transparent;
-            font-family: 'DM Sans', sans-serif;
-            font-size: 13px;
-            color: var(--text-primary);
-            outline: none;
-            width: 180px;
-        }
 
         .search-box input::placeholder { color: var(--text-muted); }
 
@@ -385,7 +365,7 @@
         </div>
         <div class="stat-card">
             <p class="stat-label">Low Stock Items</p>
-            <p class="stat-value" style="color: var(--red);"><?= count(array_filter($products, fn($p) => $p['quantity'] <= 5)); ?></p>
+            <p class="stat-value" style="color: var(--red);"><?= count(array_filter($products, fn($p) => $p['quantity'] <= 10)); ?></p>
         </div>
         <div class="stat-card">
             <p class="stat-label">In Stock Items</p>
@@ -397,12 +377,6 @@
 
         <div class="table-toolbar">
             <span class="table-toolbar-title">All Products</span>
-            <div class="search-box">
-                <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round">
-                    <circle cx="6.5" cy="6.5" r="4.5"/><line x1="10" y1="10" x2="14" y2="14"/>
-                </svg>
-                <input type="text" placeholder="Search products...">
-            </div>
         </div>
 
         <table>
